@@ -8,10 +8,10 @@ gulp.task('default', ['sass', 'watch', 'browser-sync']);
 
 //Sass
 gulp.task('sass', function () {
-  return gulp.src('assets/sass/**/*.scss')
+  return gulp.src('src/sass/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('assets/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({stream:true}));
   });
 
@@ -22,11 +22,11 @@ gulp.task('browser-sync', ['sass'], function() {
     server: "."
   });
 
-  gulp.watch("assets/sass/**/*.scss", ['sass']);
+  gulp.watch("src/sass/**/*.scss", ['sass']);
   gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 //Watch
 gulp.task('watch', function () {
-  gulp.watch('assets/sass/**/*.scss',['sass']);
+  gulp.watch('src/sass/**/*.scss',['sass']);
 });
