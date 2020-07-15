@@ -5,7 +5,8 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
-body{
-  background-color: black;
-  color: yellow
-}
+// Paginas
+@import 'paginas/_index.scss';
+
+// Elementos comuns
+@import 'layout/_header.scss';
