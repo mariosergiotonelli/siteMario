@@ -1,2 +1,4 @@
 ﻿# Ignorar todos os diretorios e arquivos em um diretorio. ignore/*
 /site/node_modules
+/node_modules
+package-lock.json
